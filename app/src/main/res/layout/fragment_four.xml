@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Four"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bubbles04" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/skip_fragmentFour"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginStart="@dimen/dp_314"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@null"
+        android:fontFamily="@font/public_sans_medium"
+        android:text="@string/skip"
+        android:textAllCaps="false"
+        android:textSize="@dimen/sp_18" />
+
+    <TextView
+        android:id="@+id/spiice_activityFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_144"
+        android:layout_marginTop="@dimen/dp_48"
+        android:fontFamily="@font/red_hat_display_medium"
+        android:padding="@dimen/dp_8"
+        android:text="@string/spiice"
+        android:textColor="@color/spiice"
+        android:textSize="@dimen/sp_32" />
+
+    <ImageView
+        android:layout_width="@dimen/dp_276"
+        android:layout_height="@dimen/dp_354"
+        android:layout_marginStart="@dimen/dp55"
+        android:layout_marginTop="@dimen/dp_186_75"
+        android:src="@drawable/illustration04" />
+
+    <TextView
+        android:id="@+id/make_money"
+        android:layout_width="@dimen/dp_239"
+        android:layout_height="@dimen/dp_58"
+        android:layout_marginStart="@dimen/dp_68"
+        android:layout_marginTop="@dimen/dp_643"
+        android:fontFamily="@font/public_sans_regular"
+        android:maxLines="2"
+        android:text="@string/chat_with_others"
+        android:textAlignment="center"
+        android:textColor="@color/spiice"
+        android:textSize="@dimen/sp_18" />
+
+    <ImageView
+        android:layout_width="@dimen/dp_52"
+        android:layout_height="@dimen/dp_7"
+        android:layout_marginStart="@dimen/dp_161"
+        android:layout_marginTop="@dimen/dp_733"
+        android:src="@drawable/diaporama03" />
+</FrameLayout>

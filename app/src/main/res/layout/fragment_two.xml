@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Two"
+    android:layout_width="@dimen/width"
+    android:layout_height="@dimen/height">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bubbles02" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/skip_fragmentTwo"
+        android:layout_width="@dimen/dp_48"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginStart="@dimen/dp_312"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@null"
+        android:fontFamily="@font/public_sans_medium"
+        android:text="@string/skip"
+        android:textAllCaps="false"
+        android:textSize="@dimen/sp_18" />
+
+    <TextView
+        android:id="@+id/spiice_activityTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_144"
+        android:layout_marginTop="@dimen/dp_48"
+        android:fontFamily="@font/red_hat_display_medium"
+        android:padding="@dimen/dp_8"
+        android:text="@string/spiice"
+        android:textColor="@color/spiice"
+        android:textSize="@dimen/sp_32" />
+
+    <ImageView
+        android:layout_width="@dimen/dp_271"
+        android:layout_height="@dimen/dp_271"
+        android:layout_gravity="center"
+        android:src="@drawable/illustration_globe01" />
+
+    <TextView
+        android:id="@+id/find_projects_everywhere"
+        android:layout_width="@dimen/dp_253"
+        android:layout_height="@dimen/dp_58"
+        android:layout_marginStart="@dimen/dp_61"
+        android:layout_marginTop="@dimen/dp_643"
+        android:fontFamily="@font/public_sans_regular"
+        android:maxLines="2"
+        android:text="@string/find_projects"
+        android:textAlignment="center"
+        android:textColor="@color/spiice"
+        android:textSize="@dimen/sp_18" />
+
+    <ImageView
+        android:id="@+id/diaporama01"
+        android:layout_width="@dimen/dp_52"
+        android:layout_height="@dimen/dp_7"
+        android:layout_marginStart="@dimen/dp_161"
+        android:layout_marginTop="@dimen/dp_733"
+        android:src="@drawable/diaporama01" />
+
+</FrameLayout>
