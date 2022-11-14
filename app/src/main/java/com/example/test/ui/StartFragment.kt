@@ -4,36 +4,38 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.test.R
+import com.example.test.databinding.FragmentStartProgramBinding
 
-class StartFragment :Fragment() {
+class StartFragment : Fragment() {
+
+    private lateinit var binding: FragmentStartProgramBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_start_program,container,false)
+    ): View {
+        binding = FragmentStartProgramBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<Button>(R.id.button_discover_the_platform).setOnClickListener{
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.container, FragmentTwo() )
-            .commit()
+        binding.buttonDiscoverThePlatform.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.container, FindProjectFragment())
+                .commit()
 
             Thread {
                 try {
                     Thread.sleep(2000)
-                    parentFragmentManager.beginTransaction().
-                    replace(R.id.container, FragmentThree() )
+                    parentFragmentManager.beginTransaction()
+                        .replace(R.id.container, MakeMoneyFragment())
                         .commit()
                 } catch (e: InterruptedException) {
-                    var ff = 22222
                     e.printStackTrace()
                 }
 
@@ -45,8 +47,7 @@ class StartFragment :Fragment() {
                 } catch (e: InterruptedException) {
                     e.printStackTrace()
                 }
-                parentFragmentManager.beginTransaction().
-                replace(R.id.container, FragmentFour() )
+                parentFragmentManager.beginTransaction().replace(R.id.container, ChatWithOtherFragment())
                     .commit()
             }.start()
 
@@ -56,8 +57,7 @@ class StartFragment :Fragment() {
                 } catch (e: InterruptedException) {
                     e.printStackTrace()
                 }
-                parentFragmentManager.beginTransaction().
-                replace(R.id.container, FragmentFive() )
+                parentFragmentManager.beginTransaction().replace(R.id.container, HardWorkFragment())
                     .commit()
             }.start()
 
@@ -67,16 +67,14 @@ class StartFragment :Fragment() {
                 } catch (e: InterruptedException) {
                     e.printStackTrace()
                 }
-                parentFragmentManager.beginTransaction().
-                replace(R.id.container, FragmentSix() )
+                parentFragmentManager.beginTransaction().replace(R.id.container, EnjoyFragment())
                     .commit()
             }.start()
         }
 
-        view.findViewById<Button>(R.id.have_account_login).setOnClickListener{
+        binding.haveAccountLogin.setOnClickListener {
             parentFragmentManager.beginTransaction()
                 .replace(R.id.container, LogInFragment())
-                .addToBackStack("")
                 .commit()
         }
     }

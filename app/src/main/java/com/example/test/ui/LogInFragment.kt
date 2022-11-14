@@ -9,70 +9,60 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.test.R
+import com.example.test.databinding.FragmentLogInBinding
+import com.example.test.repositories.SharedPreferencesRepository
 import com.example.test.ui.listnote.ListFragment
+import com.example.test.ui.note.BottomNavigationFragment
 import com.google.android.material.textfield.TextInputLayout
 
-class LogInFragment:Fragment() {
-    lateinit var textInputEmail: String
-    lateinit var textInputLogin: String
+class LogInFragment : Fragment() {
+
+    private lateinit var binding: FragmentLogInBinding
+
     lateinit var toast: Toast
-    val colInputChar = 5
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
-        return inflater.inflate(R.layout.fragmrnt_log_in, container, false)
+    ): View {
+        binding = FragmentLogInBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val returnSign: Button = view.findViewById<Button>(R.id.return_sign)
+
+        val sharedPreferencesRepository = SharedPreferencesRepository(requireContext())
+        binding.firstName.text = sharedPreferencesRepository.getUserName()
+
+//      binding.password21.editText?.text = sharedPreferencesRepository.getUserPassword()
+                
+        val returnSign: Button = binding.returnSign
         returnSign.setOnClickListener {
+
             parentFragmentManager.beginTransaction()
                 .replace(R.id.container, SingUpFragment())
                 .addToBackStack("")
                 .commit()
         }
 
-
-        val buttonLogIn: Button = view.findViewById<Button>(R.id.button_log_in21)
+        val buttonLogIn: Button = binding.buttonLogIn21
         buttonLogIn.setOnClickListener {
-
-
-            val login = view.findViewById<TextInputLayout>(R.id.password21)
-            textInputLogin = login.editText?.text.toString()
-
-            val email = view.findViewById<TextInputLayout>(R.id.email21)
-            textInputEmail = email.editText?.text.toString()
-            val isExist = "@" in textInputEmail
-
-            if (isExist == false) {
-                toast = Toast.makeText(
-                    activity,
-                    "email mast contain '@'",
-                    Toast.LENGTH_LONG
-                )
-                toast.setGravity(Gravity.CENTER, 0, 0)
-                toast.show()
-
-            } else if (textInputLogin.length <= colInputChar || textInputEmail.length <= colInputChar) {
-
-                toast = Toast.makeText(
-                    activity,
-                    "wrong password or email",
-                    Toast.LENGTH_LONG
-                )
-                toast.setGravity(Gravity.CENTER, 0, 0)
-                toast.show()
-            } else {
+            if(binding.textInputPassword.text.toString() == sharedPreferencesRepository.getUserPassword()) {
                 parentFragmentManager.beginTransaction()
-                    .replace(R.id.container, ListFragment())
+                    .replace(R.id.container, BottomNavigationFragment())
                     .commit()
+                parentFragmentManager.beginTransaction()
+                    .add(R.id.container, ListFragment())
+                    .commit()
+
+            }
+            else {
+                toast = Toast.makeText(activity, "in correct password", Toast.LENGTH_SHORT)
+                toast.show()
             }
         }
-
     }
 }

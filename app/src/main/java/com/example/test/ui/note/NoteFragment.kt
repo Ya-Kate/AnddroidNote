@@ -1,4 +1,4 @@
-package com.example.test.note
+package com.example.test.ui.note
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,8 +9,8 @@ import androidx.core.os.bundleOf
 import com.example.test.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
-const val TITLE_EXTRA = "title"
-const val MESSAGE_EXTRA = "message"
+private const val TITLE_EXTRA = "title"
+private const val MESSAGE_EXTRA = "message"
 
 class NoteFragment : BottomSheetDialogFragment() {
 

@@ -12,7 +12,7 @@
         android:layout_width="343dp"
         android:layout_height="412dp"
         android:layout_marginStart="@dimen/dp_16"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="@dimen/dp100"
         android:background="@drawable/bg_blur">
 
     </ImageView>
@@ -45,7 +45,8 @@
             android:background="@color/bg_edit_text_FBEAFF"
             android:fontFamily="@font/public_sans_medium"
             android:maxLength="15"
-            android:textSize="@dimen/sp_16" />
+            android:textSize="@dimen/sp_16"
+            android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -86,8 +87,9 @@
             android:layout_height="wrap_content"
             android:background="@color/bg_edit_text_FBEAFF"
             android:fontFamily="@font/public_sans_medium"
-            android:maxLength="15"
-            android:textSize="@dimen/sp_16" />
+            android:maxLength="35"
+            android:textSize="@dimen/sp_16"
+            android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -107,7 +109,9 @@
             android:layout_height="wrap_content"
             android:background="@color/bg_edit_text_FBEAFF"
             android:fontFamily="@font/public_sans_medium"
-            android:textSize="@dimen/sp_16" />
+            android:textSize="@dimen/sp_16"
+            android:maxLength="25"
+            android:maxLines="1"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 

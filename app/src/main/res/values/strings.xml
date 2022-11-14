@@ -57,5 +57,18 @@
     <string name="delete">Delete</string>
     <string name="yes">YES</string>
     <string name="no">NO</string>
+    <string name="all_notes">All Notes</string>
+    <string name="added_note">Added note</string>
+    <string name="logout">Logout</string>
+    <string name="delete_profile">Delete profile</string>
+    <string name="notes">notes</string>
+    <string name="first_name">First Name</string>
+
+    <string name="email_invalid">Wrong email format</string>
+    <string name="email_blank">Email required</string>
+    <string name="password_blank">Password required</string>
+    <string name="search">Search</string>
+    <string name="profile">Profile</string>
+    <string name="dustin_warren">Dustin Warren</string>
 
 </resources>

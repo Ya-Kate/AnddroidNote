@@ -1,52 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/width"
-    android:layout_height="@dimen/height"
-    android:paddingStart="@dimen/dp_16"
-    android:paddingTop="@dimen/dp_40"
-    android:paddingEnd="@dimen/dp_16">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_4"
-        android:src="@drawable/arrow" />
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp712"
+    android:background="@color/bg_list_navigation">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/logout_button"
-        style="@style/bg_list_of_note"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/dp_48"
-        android:layout_marginStart="@dimen/dp_24"
-        android:paddingBottom="@dimen/dp_23"
-        android:text="@string/logout_text" />
-
-    <Button
-        android:id="@+id/delete_notes"
-        style="@style/bg_buttonSend"
-        android:layout_width="102dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_145"
-        android:hint="Delete note"
-        android:textColor="@color/black"
-        android:textSize="@dimen/sp_16" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        style="@style/bg_list_of_note"
-        android:id="@+id/addNewNote"
-        android:layout_width="@dimen/dp_74"
-        android:layout_height="@dimen/dp_48"
-        android:layout_marginStart="270dp"
-        android:paddingBottom="23dp"
-        android:text="@string/add_new" />
-
+    <TextView
+        android:id="@+id/all_notes"
+        style="@style/name_list_navigation"
+        android:layout_width="@dimen/dp_172"
+        android:layout_height="@dimen/dp_52"
+        android:text="@string/all_notes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listNote"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/dp_56"
-        android:scrollbars="none"/>
+        android:layout_height="@dimen/dp0"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/all_notes"
+        app:layout_constraintVertical_bias="0.0" />
 
 
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
