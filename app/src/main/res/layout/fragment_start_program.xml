@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/width"
-    android:layout_height="@dimen/height">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="centerCrop"
         android:src="@drawable/bubble01" />
 
     <TextView
         android:id="@+id/fragment_spiice"
-        android:layout_width="wrap_content"
+        android:layout_width="282dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/sixty_five_dp"
         android:layout_marginTop="@dimen/twoH_eighteen_dp"
+        android:gravity="center"
         android:width="@dimen/twoH_fouty_four_dp"
         android:height="@dimen/oneH_twenty_seven"
         android:fontFamily="@font/red_hat_display_medium"
@@ -24,11 +25,11 @@
 
     <Button
         android:id="@+id/button_discover_the_platform"
-        android:layout_width=
-            "@dimen/twoH_sixty_three_dp"
-        android:layout_height="@dimen/fifty_four_dp"
-        android:layout_marginStart="@dimen/fifty_six_dp"
-        android:layout_marginTop="@dimen/sixH_two_dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp65"
+        android:layout_marginEnd="@dimen/dp65"
+        android:layout_marginTop="@dimen/dp550"
         android:background="@drawable/bg_button"
         android:fontFamily="@font/public_sans_medium"
         android:text="@string/discover_the_platform"
@@ -38,10 +39,11 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/have_account_login"
-        android:layout_width="@dimen/dp_240"
-        android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/sixty_eight_dp"
-        android:layout_marginTop="@dimen/sixH_eighty_three_dp"
+        android:layout_marginEnd="@dimen/dp_68"
+        android:layout_marginTop="@dimen/dp650"
         android:background="@null"
         android:fontFamily="@font/public_sans_medium"
         android:text="@string/you_have_an_account_log_in"

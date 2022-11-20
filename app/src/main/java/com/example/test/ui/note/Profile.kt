@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.test.R
 import com.example.test.databinding.FragmentListBinding
 import com.example.test.databinding.FragmentProfileBinding
+import com.example.test.repositories.NoteRepository
 import com.example.test.repositories.SharedPreferencesRepository
 import com.example.test.singlton.SingletonNotes
 import com.example.test.ui.StartFragment
@@ -20,6 +21,11 @@ import com.example.test.ui.listnote.ListFragment
 import com.example.test.ui.listnote.ListViewModel
 
 class Profile:Fragment() {
+
+    private val noteRepository = NoteRepository()
+
+    private val viewModel:ListViewModel by viewModels()
+
 
     private lateinit var binding: FragmentProfileBinding
 
@@ -35,7 +41,13 @@ class Profile:Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.collNote.text = SingletonNotes.arrayNotes.size.toString()+" notes"
+
+//  Если раскоментить, не заходит и не присваивает значения
+
+//        viewModel.countNotes.observe(viewLifecycleOwner) {
+//            binding.collNote.text = it.toString() + " note"
+//        }
+        binding.collNote.text = SingletonNotes.db.noteDao().selectAllNote().size.toString()+" notes"
 
         view.run {
             val buttonDeleteNotes: Button = view.findViewById(R.id.delete_notes)
@@ -45,6 +57,7 @@ class Profile:Fragment() {
 
             val buttonLogout: Button = view.findViewById<Button>(R.id.logout)
             buttonLogout.setOnClickListener {
+
                 val sharedPreferencesRepository = SharedPreferencesRepository(requireContext())
                 sharedPreferencesRepository.logout()
                 parentFragmentManager.beginTransaction()

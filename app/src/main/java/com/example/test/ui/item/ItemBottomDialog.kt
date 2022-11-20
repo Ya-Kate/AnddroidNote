@@ -7,14 +7,13 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.viewModels
 import com.example.test.R
-import com.example.test.model.Note
 import com.example.test.repositories.NoteRepository
 import com.example.test.ui.listnote.ListViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class ItemBottomDialog : BottomSheetDialogFragment() {
 
-    private val noteRepository = NoteRepository()
+    private val viewModel: ListViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,8 +25,9 @@ class ItemBottomDialog : BottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         view.findViewById<Button>(R.id.yes_delete).setOnClickListener {
-            noteRepository.getListNotes().clear()
+            viewModel.deletAllNotes()
             dismiss()
         }
 

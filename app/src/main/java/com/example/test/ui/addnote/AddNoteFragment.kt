@@ -13,9 +13,6 @@ import com.example.test.databinding.FragmentAddNoteBinding
 import com.example.test.model.Note
 import com.example.test.sampleobserver.Publisher
 import com.example.test.sampleobserver.Subscriber
-import com.example.test.ui.listnote.ListFragment
-import com.example.test.ui.note.Profile
-import com.example.test.ui.note.SearchFragment
 import com.example.test.util.getData
 
 class AddNoteFragment : Fragment(), Subscriber {
@@ -42,14 +39,14 @@ class AddNoteFragment : Fragment(), Subscriber {
             val buttonTitle = binding.title
             val buttonMessage = binding.message
             val picker: DatePicker = binding.calendarView
-            val stringData: String = getData(picker)
+            val stringData: Long = getData(picker)
 
             val title = buttonTitle.editText?.text.toString()
             val message = buttonMessage.editText?.text.toString()
 
             viewModel.addNote(title, message, stringData)
 
-
+//            throw RuntimeException("Test Crash")
             AlertDialog.Builder(requireContext())
                 .setTitle(R.string.added_note)
                 .create()

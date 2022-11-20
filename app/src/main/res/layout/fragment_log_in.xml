@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="@dimen/width"
-    android:layout_height="@dimen/height">
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp650">
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bubbles07" />
 
     <ImageView
-        android:layout_width="@dimen/dp_343"
+        android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginStart="@dimen/dp_16"
         android:layout_marginTop="60dp"
+        android:layout_marginEnd="@dimen/dp_16"
         android:background="@drawable/bg_blur" />
 
     <TextView
@@ -37,8 +38,7 @@
         android:hint="@string/first_name"
         android:paddingStart="@dimen/dp15"
         android:paddingTop="@dimen/dp15"
-        android:textColorHint="#7E57C2"
-        />
+        android:textColorHint="#7E57C2" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email21"
@@ -70,10 +70,10 @@
         android:layout_marginTop="@dimen/dp_268"
         android:layout_marginEnd="@dimen/dp_40"
         android:hint="@string/password21"
+        android:textColorHint="#7E57C2"
         app:counterEnabled="true"
         app:counterMaxLength="15"
-        app:endIconMode="password_toggle"
-        android:textColorHint="#7E57C2">
+        app:endIconMode="password_toggle">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/text_input_password"
@@ -89,18 +89,22 @@
     <Button
         android:id="@+id/button_log_in21"
         style="@style/bg_button"
-        android:layout_width="@dimen/twoH_sixty_three_dp"
-        android:layout_height="@dimen/fifty_four_dp"
-        android:layout_marginStart="@dimen/fifty_six_dp"
-        android:layout_marginTop="@dimen/sixH_two_dp"
-        android:text="@string/log_in021" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp65"
+        android:layout_marginTop="@dimen/dp450"
+        android:layout_marginEnd="@dimen/dp65"
+        android:fontFamily="@font/public_sans_regular"
+        android:text="@string/add"
+        android:textSize="@dimen/sp_18" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/return_sign"
-        android:layout_width="@dimen/dp_149"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/dp_48"
         android:layout_marginStart="@dimen/dp_114"
-        android:layout_marginTop="@dimen/dp_670"
+        android:layout_marginEnd="@dimen/dp_114"
+        android:layout_marginTop="550dp"
         android:background="@null"
         android:fontFamily="@font/public_sans_medium"
         android:text="@string/return_to_sign_up21"

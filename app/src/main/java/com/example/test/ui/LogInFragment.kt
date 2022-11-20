@@ -13,6 +13,7 @@ import com.example.test.databinding.FragmentLogInBinding
 import com.example.test.repositories.SharedPreferencesRepository
 import com.example.test.ui.listnote.ListFragment
 import com.example.test.ui.note.BottomNavigationFragment
+import com.example.test.ui.note.Profile
 import com.google.android.material.textfield.TextInputLayout
 
 class LogInFragment : Fragment() {

@@ -7,10 +7,11 @@ import java.util.*
 private const val SIMPLE_DATE_FORMAT = "dd.MM.yyyy"
 
 
-    fun getData(picker: DatePicker): String {
+    fun getData(picker: DatePicker): Long {
         val calendar = Calendar.getInstance()
         calendar[picker.year, picker.month] = picker.dayOfMonth
 
-        val sdf = SimpleDateFormat("dd.MM.yyyy")
-        return sdf.format(calendar.time)
+//        val sdf = SimpleDateFormat("dd.MM.yyyy")
+//        return sdf.format(calendar.time)
+        return calendar.timeInMillis
     }

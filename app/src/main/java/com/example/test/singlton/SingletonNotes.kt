@@ -1,8 +1,20 @@
 package com.example.test.singlton
 
-import com.example.test.model.Note
+import android.content.Context
+import androidx.room.Room
+import com.example.test.db.AppDataBase
 
 object SingletonNotes {
-    val arrayNotes = arrayListOf<Note>()
-    var startActivity:Boolean = false
+
+    lateinit var db: AppDataBase
+
+    fun initBD(context:Context) {
+        db = Room.databaseBuilder(
+            context,
+            AppDataBase::class.java, "database-name"
+
+//   Если убрать: .allowMainThreadQueries()  выбрасывает с программы
+        ).allowMainThreadQueries().build()
+
+    }
 }

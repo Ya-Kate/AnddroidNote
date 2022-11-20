@@ -24,7 +24,7 @@ class AdapterNote(
     }
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
-        holder.bind(SingletonNotes.arrayNotes[position])
+        holder.bind(SingletonNotes.db.noteDao().selectAllNote()[position])
         holder.itemView.setOnClickListener {
             onClick(list[position])
         }

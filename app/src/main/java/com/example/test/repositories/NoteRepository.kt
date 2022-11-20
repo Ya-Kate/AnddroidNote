@@ -5,12 +5,16 @@ import com.example.test.singlton.SingletonNotes
 
 class NoteRepository {
 
-    fun addNone(note: Note) {
-        SingletonNotes.arrayNotes.add(note)
+      suspend fun addNone(note: Note) {
+        SingletonNotes.db.noteDao().insertNote(note)
     }
 
-    fun getListNotes() :ArrayList<Note> {
-        return SingletonNotes.arrayNotes
+      fun getListNotes() :ArrayList<Note> {
+        return SingletonNotes.db.noteDao().selectAllNote() as ArrayList<Note>
+    }
+
+    suspend fun deletAllNote() {
+        SingletonNotes.db.noteDao().deletAllNote()
     }
 
 

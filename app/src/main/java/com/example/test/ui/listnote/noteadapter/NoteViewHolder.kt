@@ -5,22 +5,26 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.test.R
 import com.example.test.databinding.ItemNoteBinding
 import com.example.test.model.Note
+import com.example.test.util.DateConverter
+import com.example.test.util.convertToSimpleDate
 import java.text.SimpleDateFormat
 import java.util.*
 
 class NoteViewHolder(val binding: ItemNoteBinding) : RecyclerView.ViewHolder(binding.root) {
+
+    val dateConvector = DateConverter()
+
     fun bind(note: Note) {
+
         val dateString = note.nowData
-        val formatter = SimpleDateFormat("dd.MM.yyyy")
-        val dateNote = formatter.parse(dateString)
-        val dataStringNow = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault()).format(Date())
-        val dataNow = formatter.parse(dataStringNow)
+
+        val curTime: Long = Date().getTime()
 
         binding.title.text = note.title
         binding.message.text = note.message
-        binding.time.text = note.nowData
+        binding.date.text = dateConvector.dateFromLong(dateString).convertToSimpleDate()
 
-        val cmp = dateNote.compareTo(dataNow)
+        val cmp = dateString.compareTo(curTime)
         when {
             cmp > 0 -> {
                 binding.root.setBackgroundColor(binding.root.rootView.resources.getColor(

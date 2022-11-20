@@ -113,6 +113,11 @@
     <dimen name="dp33">33dp</dimen>
     <dimen name="sp25">25sp</dimen>
     <dimen name="sp20">20sp</dimen>
+    <dimen name="dp650">650dp</dimen>
+    <dimen name="dp450">450dp</dimen>
+    <dimen name="dp65">65dp</dimen>
+    <dimen name="dp550">550dp</dimen>
+    <dimen name="dp630">630dp</dimen>
     <!--    <dimen name="_38dp">38dp</dimen>-->
 <!--    <dimen name="_21dp">21dp</dimen>-->
 <!--    <dimen name="_322dp">322dp</dimen>-->
