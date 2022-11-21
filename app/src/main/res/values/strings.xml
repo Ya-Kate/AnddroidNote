@@ -1,0 +1,61 @@
+<resources>
+
+    <string name="spiice">Spiice</string>
+    <string name="discover_the_platform">Discover the platform</string>
+    <string name="you_have_an_account_log_in">You have an account ? Log-in</string>
+    <string name="skip">Skip</string>
+    <string name="title_activity_two">Leanback Activity_Two</string>
+    <string name="browse_title">Videos by Your Company</string>
+    <string name="related_movies">Related Videos</string>
+    <string name="grid_view">Grid View</string>
+    <string name="error_fragment">Error Fragment</string>
+    <string name="personal_settings">Personal Settings</string>
+    <string name="watch_trailer_1">Watch trailer</string>
+    <string name="watch_trailer_2">FREE</string>
+    <string name="rent_1">Rent By Day</string>
+    <string name="rent_2">From $1.99</string>
+    <string name="buy_1">Buy and Own</string>
+    <string name="buy_2">AT $9.99</string>
+    <string name="movie">Movie</string>
+
+    <!-- Error messages -->
+    <string name="error_fragment_message">An error occurred</string>
+    <string name="dismiss_error">Dismiss</string>
+    <string name="make_money">Make money while working on awesome projects</string>
+    <string name="title_activity_four">ActivityFour</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="chat_with_others">Chat with others freelancers and develop your network</string>
+    <string name="work_hard_and_level_up">Work hard and level up!</string>
+    <string name="enjoy_your_progess">Enjoy your progess!</string>
+    <string name="find_projects">Find projects from companies everywhere in the word</string>
+    <string name="button_sign_up">Sign-up</string>
+    <string name="sign_up07">Sign-up</string>
+    <string name="first_name07">First name</string>
+    <string name="last_name07">Last name</string>
+    <string name="email07">Email</string>
+    <string name="password07">Password</string>
+    <string name="log_in21">Log-in</string>
+    <string name="email21">Email</string>
+    <string name="password21">Password</string>
+    <string name="log_in021">Log-in</string>
+    <string name="return_to_sign_up21">Return to Sign-up</string>
+    <string name="logout_text">Logout</string>
+    <string name="add_new">Add new</string>
+    <string name="button_back">Back</string>
+    <string name="add_note">Add note</string>
+    <string name="title">Title</string>
+    <string name="message">Message</string>
+    <string name="add_text">Add</string>
+    <string name="send">Send</string>
+    <string name="delete">Delete</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+
+</resources>
