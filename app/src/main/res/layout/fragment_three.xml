@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/Three"
-    android:layout_width="@dimen/width"
-    android:layout_height="@dimen/height">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
         android:scaleType="centerCrop"
         android:src="@drawable/bubbles03" />
 
@@ -35,19 +36,22 @@
         android:textSize="@dimen/sp_32" />
 
     <ImageView
-        android:layout_width="@dimen/dp_276"
+        android:layout_width="315dp"
         android:layout_height="@dimen/dp_354"
         android:layout_marginStart="@dimen/dp_47"
         android:layout_marginTop="@dimen/dp_148"
+        android:contentDescription="@null"
         android:src="@drawable/illustration03" />
 
     <TextView
         android:id="@+id/make_money"
-        android:layout_width="@dimen/dp_227"
-        android:layout_height="@dimen/dp_58"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_74"
-        android:layout_marginTop="@dimen/dp_643"
+        android:layout_marginTop="@dimen/dp550"
+        android:layout_marginEnd="@dimen/dp_74"
         android:fontFamily="@font/public_sans_regular"
+        android:gravity="center"
         android:maxLines="2"
         android:text="@string/make_money"
         android:textAlignment="center"
@@ -55,12 +59,11 @@
         android:textSize="@dimen/sp_18" />
 
     <ImageView
-        android:id="@+id/doaporama03"
-        android:layout_width="@dimen/dp_52"
-        android:layout_height="@dimen/dp_7"
-        android:layout_marginStart="@dimen/dp_161"
-        android:layout_marginTop="@dimen/dp_733"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_172"
+        android:layout_marginTop="@dimen/dp650"
+        android:contentDescription="@null"
         android:src="@drawable/diaporama02" />
-
 
 </FrameLayout>

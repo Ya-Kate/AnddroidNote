@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/Two"
-    android:layout_width="@dimen/width"
-    android:layout_height="@dimen/height">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@null"
         android:scaleType="centerCrop"
         android:src="@drawable/bubbles02" />
 
@@ -37,16 +37,17 @@
 
     <ImageView
         android:layout_width="@dimen/dp_271"
-        android:layout_height="@dimen/dp_271"
+        android:layout_height="317dp"
         android:layout_gravity="center"
+        android:contentDescription="@null"
         android:src="@drawable/illustration_globe01" />
 
     <TextView
         android:id="@+id/find_projects_everywhere"
-        android:layout_width="@dimen/dp_253"
+        android:layout_width="289dp"
         android:layout_height="@dimen/dp_58"
         android:layout_marginStart="@dimen/dp_61"
-        android:layout_marginTop="@dimen/dp_643"
+        android:layout_marginTop="@dimen/dp550"
         android:fontFamily="@font/public_sans_regular"
         android:maxLines="2"
         android:text="@string/find_projects"
@@ -55,11 +56,11 @@
         android:textSize="@dimen/sp_18" />
 
     <ImageView
-        android:id="@+id/diaporama01"
-        android:layout_width="@dimen/dp_52"
-        android:layout_height="@dimen/dp_7"
-        android:layout_marginStart="@dimen/dp_161"
-        android:layout_marginTop="@dimen/dp_733"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_172"
+        android:layout_marginTop="@dimen/dp650"
+        android:contentDescription="@null"
         android:src="@drawable/diaporama01" />
 
 </FrameLayout>

@@ -1,83 +1,91 @@
 package com.example.test.ui
 
 import android.os.Bundle
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.test.R
+import com.example.test.databinding.FragmentStartProgramBinding
+import dagger.hilt.android.AndroidEntryPoint
+import java.util.Timer
+import java.util.logging.Handler
+import javax.inject.Inject
 
-class StartFragment :Fragment() {
+@AndroidEntryPoint
+class StartFragment : Fragment() {
+
+    private lateinit var binding: FragmentStartProgramBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_start_program,container,false)
+    ): View {
+        binding = FragmentStartProgramBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<Button>(R.id.button_discover_the_platform).setOnClickListener{
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.container, FragmentTwo() )
-            .commit()
+        binding.buttonDiscoverThePlatform.setOnClickListener {
 
-            Thread {
-                try {
-                    Thread.sleep(2000)
-                    parentFragmentManager.beginTransaction().
-                    replace(R.id.container, FragmentThree() )
+
+
+            parentFragmentManager.beginTransaction()
+                        .replace(R.id.container, MakeMoneyFragment())
                         .commit()
-                } catch (e: InterruptedException) {
-                    var ff = 22222
-                    e.printStackTrace()
-                }
 
-            }.start()
 
-            Thread {
-                try {
-                    Thread.sleep(5000)
-                } catch (e: InterruptedException) {
-                    e.printStackTrace()
-                }
-                parentFragmentManager.beginTransaction().
-                replace(R.id.container, FragmentFour() )
-                    .commit()
-            }.start()
-
-            Thread {
-                try {
-                    Thread.sleep(8000)
-                } catch (e: InterruptedException) {
-                    e.printStackTrace()
-                }
-                parentFragmentManager.beginTransaction().
-                replace(R.id.container, FragmentFive() )
-                    .commit()
-            }.start()
-
-            Thread {
-                try {
-                    Thread.sleep(11000)
-                } catch (e: InterruptedException) {
-                    e.printStackTrace()
-                }
-                parentFragmentManager.beginTransaction().
-                replace(R.id.container, FragmentSix() )
-                    .commit()
-            }.start()
+//            Thread {
+//                try {
+//                    Thread.sleep(2000)
+//                    parentFragmentManager.beginTransaction()
+//                        .replace(R.id.container, MakeMoneyFragment())
+//                        .commit()
+//                } catch (e: InterruptedException) {
+//                    e.printStackTrace()
+//                }
+//
+//            }.start()
+//
+//            Thread {
+//                try {
+//                    Thread.sleep(5000)
+//                } catch (e: InterruptedException) {
+//                    e.printStackTrace()
+//                }
+//                parentFragmentManager.beginTransaction().replace(R.id.container, ChatWithOtherFragment())
+//                    .commit()
+//            }.start()
+//
+//            Thread {
+//                try {
+//                    Thread.sleep(8000)
+//                } catch (e: InterruptedException) {
+//                    e.printStackTrace()
+//                }
+//                parentFragmentManager.beginTransaction().replace(R.id.container, HardWorkFragment())
+//                    .commit()
+//            }.start()
+//
+//            Thread {
+//                try {
+//                    Thread.sleep(11000)
+//                } catch (e: InterruptedException) {
+//                    e.printStackTrace()
+//                }
+//                parentFragmentManager.beginTransaction().replace(R.id.container, EnjoyFragment())
+//                    .commit()
+//            }.start()
         }
 
-        view.findViewById<Button>(R.id.have_account_login).setOnClickListener{
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.container, LogInFragment())
-                .addToBackStack("")
-                .commit()
+        binding.haveAccountLogin.setOnClickListener {
+                parentFragmentManager.beginTransaction()
+                    .replace(R.id.container, LogInFragment())
+                    .commit()
         }
     }
 

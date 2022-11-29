@@ -20,5 +20,14 @@
     <color name="color_hint">#7E57C2</color>
     <color name="color_item_will">#FF1733CD</color>
     <color name="item_note_today">#30C9F8</color>
+    <color name="bg_navigation">#FFFFFF</color>
+    <color name="icon_navigation">#FBEEFF</color>
+    <color name="bg_list_navigation">#FAF9FE</color>
+    <color name="color_ic_navigation">#9378FF</color>
+    <color name="bg_search">#FFFFFF</color>
+    <color name="color_icon_search">#99879D</color>
+
+
+
 
 </resources>

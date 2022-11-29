@@ -8,7 +8,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.test.R
 
-class FragmentSix:Fragment() {
+class EnjoyFragment:Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -23,7 +23,7 @@ class FragmentSix:Fragment() {
 
         view.findViewById<Button>(R.id.enjoy_your_progess).setOnClickListener {
             parentFragmentManager.beginTransaction()
-                .replace(R.id.container, LogInFragment())
+                .replace(R.id.container, SingUpFragment())
                 .commit()
         }
     }
