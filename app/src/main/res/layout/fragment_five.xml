@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bubbles05" />
+        android:background="@drawable/bubbles05"
+        android:contentDescription="@null" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/skip_fragmentFive"
@@ -38,6 +38,7 @@
         android:layout_height="@dimen/dp_432"
         android:layout_marginStart="@dimen/dp_83"
         android:layout_marginTop="@dimen/dp_138"
+        android:contentDescription="@null"
         android:src="@drawable/illustration05" />
 
     <TextView
@@ -58,6 +59,6 @@
         android:layout_height="@dimen/dp_7"
         android:layout_marginStart="@dimen/dp_161"
         android:layout_marginTop="@dimen/dp_733"
-        android:src="@drawable/diaporama04" />
+        android:contentDescription="@null" />
 
 </FrameLayout>

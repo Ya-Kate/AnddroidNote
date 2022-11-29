@@ -8,19 +8,16 @@ import android.view.ViewGroup
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModel
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.test.R
-import com.example.test.databinding.FragmentAddNoteBinding
 import com.example.test.databinding.FragmentSearchBinding
-import com.example.test.singlton.SingletonNotes
 import com.example.test.ui.listnote.ListViewModel
 import com.example.test.ui.listnote.noteadapter.AdapterNote
+import dagger.hilt.android.AndroidEntryPoint
 
-private lateinit var binding: FragmentSearchBinding
+@AndroidEntryPoint
+class SearchFragment : Fragment() {
 
-class SearchFragment: Fragment() {
+    private lateinit var binding: FragmentSearchBinding
 
     private val viewModel: ListViewModel by viewModels()
 
@@ -41,14 +38,14 @@ class SearchFragment: Fragment() {
             viewModel.searchNote(it.toString())
         }
 
-        var listSearch: RecyclerView? = null
+        val listSearch: RecyclerView? = null
 
         viewModel.searchResult.observe(viewLifecycleOwner) {
             binding.findNote.text = it.toString()
-//        (listSearch?.adapter as? AdapterNote)?.setList(it)
-//    }
-//        viewModel.searchResult
-
+            (listSearch?.adapter as? AdapterNote)?.setList(it)
         }
+        viewModel.searchResult
+
+
     }
 }

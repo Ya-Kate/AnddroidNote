@@ -10,8 +10,8 @@ class DateConverter {
         return Date(value)
     }
 
-    @TypeConverter
-    fun longFromData(date: Date) :Long {
-        return date.time
-    }
+//    @TypeConverter
+//    fun longFromData(date: Date) :Long {
+//        return date.time
+//    }
 }

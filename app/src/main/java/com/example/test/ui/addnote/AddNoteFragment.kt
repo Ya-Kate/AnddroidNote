@@ -14,7 +14,9 @@ import com.example.test.model.Note
 import com.example.test.sampleobserver.Publisher
 import com.example.test.sampleobserver.Subscriber
 import com.example.test.util.getData
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AddNoteFragment : Fragment(), Subscriber {
 
     private val viewModel: AddNoteViewModel by viewModels()

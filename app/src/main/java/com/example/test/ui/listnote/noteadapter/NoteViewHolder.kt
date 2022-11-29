@@ -1,18 +1,16 @@
 package com.example.test.ui.listnote.noteadapter
 
-import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.example.test.R
 import com.example.test.databinding.ItemNoteBinding
 import com.example.test.model.Note
 import com.example.test.util.DateConverter
 import com.example.test.util.convertToSimpleDate
-import java.text.SimpleDateFormat
 import java.util.*
 
 class NoteViewHolder(val binding: ItemNoteBinding) : RecyclerView.ViewHolder(binding.root) {
 
-    val dateConvector = DateConverter()
+    private val dateConvector = DateConverter()
 
     fun bind(note: Note) {
 
@@ -22,19 +20,23 @@ class NoteViewHolder(val binding: ItemNoteBinding) : RecyclerView.ViewHolder(bin
 
         binding.title.text = note.title
         binding.message.text = note.message
-        binding.date.text = dateConvector.dateFromLong(dateString).convertToSimpleDate()
+        binding.dates.text = dateConvector.dateFromLong(dateString).convertToSimpleDate()
 
         val cmp = dateString.compareTo(curTime)
         when {
             cmp > 0 -> {
-                binding.root.setBackgroundColor(binding.root.rootView.resources.getColor(
-                    R.color.item_note_today
-                ))
+                binding.root.setBackgroundColor(
+                    binding.root.rootView.resources.getColor(
+                        R.color.item_note_today
+                    )
+                )
             }
             cmp < 0 -> {
-                binding.root.setBackgroundColor(binding.root.rootView.resources.getColor(
-                    R.color.teal_200
-                ))
+                binding.root.setBackgroundColor(
+                    binding.root.rootView.resources.getColor(
+                        R.color.teal_200
+                    )
+                )
             }
         }
     }

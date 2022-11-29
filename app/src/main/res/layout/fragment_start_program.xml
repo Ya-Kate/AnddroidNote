@@ -6,6 +6,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@null"
         android:scaleType="centerCrop"
         android:src="@drawable/bubble01" />
 
@@ -15,10 +16,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/sixty_five_dp"
         android:layout_marginTop="@dimen/twoH_eighteen_dp"
-        android:gravity="center"
         android:width="@dimen/twoH_fouty_four_dp"
         android:height="@dimen/oneH_twenty_seven"
         android:fontFamily="@font/red_hat_display_medium"
+        android:gravity="center"
         android:letterSpacing="-0.04"
         android:text="@string/spiice"
         android:textSize="@dimen/ninety_six_sp" />
@@ -28,13 +29,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp65"
-        android:layout_marginEnd="@dimen/dp65"
         android:layout_marginTop="@dimen/dp550"
+        android:layout_marginEnd="@dimen/dp65"
         android:background="@drawable/bg_button"
         android:fontFamily="@font/public_sans_medium"
+        android:gravity="center"
         android:text="@string/discover_the_platform"
         android:textAllCaps="false"
-        android:gravity="center"
         android:textSize="@dimen/sp_18" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -42,8 +43,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/sixty_eight_dp"
-        android:layout_marginEnd="@dimen/dp_68"
         android:layout_marginTop="@dimen/dp650"
+        android:layout_marginEnd="@dimen/dp_68"
         android:background="@null"
         android:fontFamily="@font/public_sans_medium"
         android:text="@string/you_have_an_account_log_in"

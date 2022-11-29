@@ -7,24 +7,17 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.recyclerview.widget.RecyclerView
 import com.example.test.R
-import com.example.test.databinding.FragmentListBinding
 import com.example.test.databinding.FragmentProfileBinding
-import com.example.test.repositories.NoteRepository
 import com.example.test.repositories.SharedPreferencesRepository
-import com.example.test.singlton.SingletonNotes
 import com.example.test.ui.StartFragment
-import com.example.test.ui.addnote.AddNoteFragment
 import com.example.test.ui.item.ItemBottomDialog
-import com.example.test.ui.listnote.ListFragment
 import com.example.test.ui.listnote.ListViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-class Profile:Fragment() {
-
-    private val noteRepository = NoteRepository()
-
-    private val viewModel:ListViewModel by viewModels()
+@AndroidEntryPoint
+class ProfileFragment : Fragment() {
+    private val viewModel: ListViewModel by viewModels()
 
 
     private lateinit var binding: FragmentProfileBinding
@@ -41,13 +34,8 @@ class Profile:Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.collNote.text = viewModel.getCollNotes().toString()
 
-//  Если раскоментить, не заходит и не присваивает значения
-
-//        viewModel.countNotes.observe(viewLifecycleOwner) {
-//            binding.collNote.text = it.toString() + " note"
-//        }
-        binding.collNote.text = SingletonNotes.db.noteDao().selectAllNote().size.toString()+" notes"
 
         view.run {
             val buttonDeleteNotes: Button = view.findViewById(R.id.delete_notes)
@@ -67,5 +55,4 @@ class Profile:Fragment() {
             }
         }
     }
-
 }

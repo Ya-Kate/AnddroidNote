@@ -6,4 +6,5 @@ import java.util.*
 fun Date.convertToSimpleDate(): String {
     val format = SimpleDateFormat("dd.MM.yyyy")
     return format.format(this)
+
 }

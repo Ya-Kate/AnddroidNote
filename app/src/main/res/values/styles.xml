@@ -19,7 +19,7 @@
         <item name="android:fontFamily">@font/public_sans_medium</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textSize">@dimen/sp_18</item>
-        <item name="backgroundTint">@color/bg_edit_text_FBEAFF</item>
+        <item name="android:backgroundTint">@color/bg_edit_text_FBEAFF</item>
     </style>
 
     <style name="bg_list_of_note"
@@ -35,9 +35,7 @@
         <item name="android:background">@color/bg_navigation</item>
         <item name="android:textColor">@color/icon_navigation</item>
         <item name="android:gravity">center</item>
-<!--        <item name="borderRound">1dp</item>-->
-<!--        <item name="android:width">1px</item>-->
-<!--        <item name="color">@color/icon_navigation</item>-->
+
     </style>
 
     <style name="name_list_navigation">
@@ -46,7 +44,7 @@
         <item name="android:fontFamily">@font/red_hat_display_medium</item>
         <item name="android:textColor">@color/spiice</item>
         <item name="android:textSize">@dimen/sp_39</item>
-<!--        <item name="android:layout_weight">900</item>-->
+
     </style>
 
     <style name="search"

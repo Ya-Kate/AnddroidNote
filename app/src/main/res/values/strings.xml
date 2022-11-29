@@ -71,5 +71,10 @@
     <string name="profile">Profile</string>
     <string name="dustin_warren">Dustin Warren</string>
     <string name="add">Add</string>
+    <string name="list">List</string>
+    <string name="searchs">Search</string>
+
+
+
 
 </resources>

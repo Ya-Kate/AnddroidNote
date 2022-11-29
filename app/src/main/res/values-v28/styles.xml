@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="search">
+        <item name="android:strokeWidth">2</item>
+        <item name="android:background">@color/bg_navigation</item>
+        <item name="boxBackgroundMode">none</item>
+        <item name="android:buttonCornerRadius">@dimen/dp100</item>
+        <item name="android:icon">@color/black</item>
+    </style>
+</resources>

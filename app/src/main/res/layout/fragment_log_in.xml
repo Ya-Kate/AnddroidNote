@@ -7,7 +7,8 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bubbles07" />
+        android:background="@drawable/bubbles07"
+        android:contentDescription="@null" />
 
     <ImageView
         android:layout_width="match_parent"
@@ -15,7 +16,9 @@
         android:layout_marginStart="@dimen/dp_16"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="@dimen/dp_16"
-        android:background="@drawable/bg_blur" />
+        android:background="@drawable/bg_blur"
+        android:contentDescription="@null" />
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -38,6 +41,7 @@
         android:hint="@string/first_name"
         android:paddingStart="@dimen/dp15"
         android:paddingTop="@dimen/dp15"
+        android:paddingEnd="@dimen/dp15"
         android:textColorHint="#7E57C2" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -103,8 +107,8 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_48"
         android:layout_marginStart="@dimen/dp_114"
-        android:layout_marginEnd="@dimen/dp_114"
         android:layout_marginTop="550dp"
+        android:layout_marginEnd="@dimen/dp_114"
         android:background="@null"
         android:fontFamily="@font/public_sans_medium"
         android:text="@string/return_to_sign_up21"

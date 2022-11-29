@@ -1,4 +1,4 @@
-package com.example.test.Validation
+package com.example.test.validation
 
 sealed class ValidationResult
     object Valid: ValidationResult()

@@ -4,21 +4,20 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.test.model.Note
 import com.example.test.repositories.NoteRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.util.*
+import javax.inject.Inject
 
-class AddNoteViewModel : ViewModel() {
+@HiltViewModel
+class AddNoteViewModel @Inject constructor(private val repository: NoteRepository) : ViewModel() {
 
-    private val repository = NoteRepository()
+    private var noteAddeed: (() -> Unit)? = null
 
-    var noteAddeed:(()->Unit)? = null
-
-    fun addNote(title: String, message: String, date:Long) {
+    fun addNote(title: String, message: String, date: Long) {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.addNone(Note(0,title, message, date))
+            repository.addNone(Note(0, title, message, date))
             noteAddeed?.invoke()
         }
-
     }
 }

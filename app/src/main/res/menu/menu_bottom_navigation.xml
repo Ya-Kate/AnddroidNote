@@ -3,22 +3,22 @@
     <item
         android:id="@+id/list"
         android:icon="@drawable/home_icon__2_"
-        android:title="List"
+        android:title="@list"
         />
     <item
         android:id="@+id/search"
         android:icon="@drawable/search_icon__1_"
-        android:title="Search"
+        android:title="@searchs"
         />
     <item
         android:id="@+id/message"
         android:icon="@drawable/message_icon__1_"
-        android:title="Message"
+        android:title="@message"
         />
     <item
         android:id="@+id/profiles"
         android:icon="@drawable/profile_icon__1_"
-        android:title="Profile"
+        android:title="@profile"
         />
 
 

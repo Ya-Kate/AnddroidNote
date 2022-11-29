@@ -1,18 +1,19 @@
 package com.example.test.ui
 
 import android.os.Bundle
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.lifecycleScope
 import com.example.test.R
 import com.example.test.databinding.FragmentStartProgramBinding
-import com.example.test.repositories.SharedPreferencesRepository
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import dagger.hilt.android.AndroidEntryPoint
+import java.util.Timer
+import java.util.logging.Handler
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class StartFragment : Fragment() {
 
     private lateinit var binding: FragmentStartProgramBinding
@@ -29,54 +30,56 @@ class StartFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         binding.buttonDiscoverThePlatform.setOnClickListener {
 
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.container, FindProjectFragment())
-                .commit()
 
-            Thread {
-                try {
-                    Thread.sleep(2000)
-                    parentFragmentManager.beginTransaction()
+
+            parentFragmentManager.beginTransaction()
                         .replace(R.id.container, MakeMoneyFragment())
                         .commit()
-                } catch (e: InterruptedException) {
-                    e.printStackTrace()
-                }
 
-            }.start()
 
-            Thread {
-                try {
-                    Thread.sleep(5000)
-                } catch (e: InterruptedException) {
-                    e.printStackTrace()
-                }
-                parentFragmentManager.beginTransaction().replace(R.id.container, ChatWithOtherFragment())
-                    .commit()
-            }.start()
-
-            Thread {
-                try {
-                    Thread.sleep(8000)
-                } catch (e: InterruptedException) {
-                    e.printStackTrace()
-                }
-                parentFragmentManager.beginTransaction().replace(R.id.container, HardWorkFragment())
-                    .commit()
-            }.start()
-
-            Thread {
-                try {
-                    Thread.sleep(11000)
-                } catch (e: InterruptedException) {
-                    e.printStackTrace()
-                }
-                parentFragmentManager.beginTransaction().replace(R.id.container, EnjoyFragment())
-                    .commit()
-            }.start()
+//            Thread {
+//                try {
+//                    Thread.sleep(2000)
+//                    parentFragmentManager.beginTransaction()
+//                        .replace(R.id.container, MakeMoneyFragment())
+//                        .commit()
+//                } catch (e: InterruptedException) {
+//                    e.printStackTrace()
+//                }
+//
+//            }.start()
+//
+//            Thread {
+//                try {
+//                    Thread.sleep(5000)
+//                } catch (e: InterruptedException) {
+//                    e.printStackTrace()
+//                }
+//                parentFragmentManager.beginTransaction().replace(R.id.container, ChatWithOtherFragment())
+//                    .commit()
+//            }.start()
+//
+//            Thread {
+//                try {
+//                    Thread.sleep(8000)
+//                } catch (e: InterruptedException) {
+//                    e.printStackTrace()
+//                }
+//                parentFragmentManager.beginTransaction().replace(R.id.container, HardWorkFragment())
+//                    .commit()
+//            }.start()
+//
+//            Thread {
+//                try {
+//                    Thread.sleep(11000)
+//                } catch (e: InterruptedException) {
+//                    e.printStackTrace()
+//                }
+//                parentFragmentManager.beginTransaction().replace(R.id.container, EnjoyFragment())
+//                    .commit()
+//            }.start()
         }
 
         binding.haveAccountLogin.setOnClickListener {

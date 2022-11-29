@@ -4,28 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.DatePicker
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.test.R
-import com.example.test.databinding.FragmentBottomNavigationBinding
 import com.example.test.databinding.FragmentListBinding
-import com.example.test.model.Note
-import com.example.test.sampleobserver.Subscriber
 import com.example.test.ui.note.NoteFragment.Companion.getNoteFragmentInstance
-import com.example.test.singlton.SingletonNotes
-import com.example.test.ui.StartFragment
-import com.example.test.ui.addnote.AddNoteFragment
-import com.example.test.ui.item.ItemBottomDialog
 import com.example.test.ui.listnote.noteadapter.AdapterNote
-import com.example.test.ui.note.BottomNavigationFragment
-import com.example.test.ui.note.Profile
-import com.example.test.ui.note.SearchFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ListFragment : Fragment() {
 
     private lateinit var binding: FragmentListBinding
@@ -47,7 +36,7 @@ class ListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.run {
-            listNote = view.findViewById<RecyclerView>(R.id.listNote)
+            listNote = view.findViewById(R.id.listNote)
             listNote?.run {
                 adapter = AdapterNote {
                     getNoteFragmentInstance(it.title, it.message).show(childFragmentManager, "")

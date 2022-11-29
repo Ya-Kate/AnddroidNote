@@ -28,7 +28,6 @@
         android:fontFamily="@font/red_hat_display_medium"
         android:text="@string/dustin_warren"
         android:textColor="@color/spiice"
-        android:textFontWeight="700"
         android:textSize="@dimen/sp25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/nameProfile" />
@@ -41,7 +40,6 @@
         android:fontFamily="@font/public_sans_regular"
         android:hint="@string/delete_profile"
         android:textColor="@color/black"
-        android:textFontWeight="500"
         android:textSize="@dimen/sp_16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/dustin_warren"
@@ -54,7 +52,8 @@
         android:layout_marginStart="@dimen/dp_16"
         android:layout_marginTop="@dimen/dp_29"
         android:fontFamily="@font/red_hat_display_medium"
-        android:paddingStart="@dimen/dp_29"
+
+
         android:text="@string/notes"
         android:textColor="@color/spiice"
         android:textSize="@dimen/sp20"

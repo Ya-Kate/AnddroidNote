@@ -15,7 +15,7 @@ interface NoteDao {
      fun deletNote(note: ArrayList<Note>)
 
     @Query ("SELECT * FROM Note")
-     fun selectAllNote(): List<Note>
+     suspend fun selectAllNote(): List<Note>
 
      @Query ("DELETE FROM Note" )
      suspend fun deletAllNote()

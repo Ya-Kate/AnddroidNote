@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.viewModels
 import com.example.test.R
-import com.example.test.repositories.NoteRepository
 import com.example.test.ui.listnote.ListViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 

@@ -49,7 +49,7 @@ class BottomNavigationFragment: Fragment() {
                 }
                 R.id.profiles -> {
                     parentFragmentManager.beginTransaction()
-                        .add(R.id.container, Profile())
+                        .add(R.id.container, ProfileFragment())
                         .addToBackStack("")
                         .commit()
                     true
